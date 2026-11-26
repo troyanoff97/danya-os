@@ -1,0 +1,76 @@
+:root{color-scheme:dark;--bg:#100e1b;--ink:#fff0ed;--muted:#bcb0cb;--edge:#3d2d50;--pink:#ff89b8;font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 19%,#291a37,transparent 57%)}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer;border:1px solid #594168;border-radius:7px;background:#21172e;padding:8px 13px}button:hover{background:#382146}a{color:inherit}button:focus-visible,a:focus-visible,#stage:focus-visible{outline:2px solid #ffc0dc;outline-offset:3px}.shell{max-width:1250px;margin:auto;padding:0 max(18px,env(safe-area-inset-right)) env(safe-area-inset-bottom) max(18px,env(safe-area-inset-left))}header{height:61px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff13}.brand{text-decoration:none;font-weight:800;letter-spacing:-.025em}.brand span{color:var(--pink);margin-right:6px}#sound{font-size:12px}.intro{text-align:center;padding:24px 0 23px}.eyebrow,.bar,.section-title span,footer{font:700 10px ui-monospace,monospace;letter-spacing:.17em;color:#d8a9d4}.intro h1{font-family:ui-monospace,monospace;font-size:clamp(50px,7.6vw,109px);line-height:.93;letter-spacing:-.105em;margin:8px .1em 12px 0;color:#ffe3e5;text-shadow:0 5px #ad437c,0 9px #512e66}.intro h1 span{color:#ff91bc}.intro>p:last-child{margin:15px auto 0;color:#d4c3db;font-size:14px}.eyebrow i,.bar i{display:inline-block;width:6px;height:6px;background:#ff92ba;box-shadow:0 0 10px #ff92ba;margin-right:7px}.arcade{border:1px solid #654774;border-radius:12px;overflow:hidden;background:#171225;box-shadow:0 16px 44px #090611aa}.bar,.game-footer{display:flex;justify-content:space-between;align-items:center;padding:9px 15px;gap:10px}.bar span:last-child{color:#ff87ac;font-size:13px}.game-footer{border-top:1px solid var(--edge);color:var(--muted);font-size:12px;min-height:43px}.keyboard{display:flex;align-items:center;gap:6px;white-space:nowrap}kbd{border:1px solid #58436d;border-bottom-width:2px;padding:2px 4px;border-radius:4px;color:#f9e4f9}#stage{height:clamp(325px,34vw,500px);background:#21142f;overflow:hidden;touch-action:none}canvas{display:block;image-rendering:pixelated}.touch{display:none;justify-content:space-between;padding:8px 10px;gap:6px}.touch button{min-width:48px;height:44px;touch-action:none;user-select:none}.touch button:active{background:#6b3b72}.section-title{display:flex;align-items:baseline;justify-content:space-between;margin:22px 0 10px}h2{margin:0;font-size:20px}#worlds{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,195px),1fr));gap:10px}.card{border:1px solid #443450;border-radius:9px;background:#1a1426;padding:11px;display:grid;grid-template-columns:34px 1fr;gap:4px 9px;align-items:center}.card .sigil{display:grid;place-items:center;grid-row:span 2;color:var(--accent);background:#0f0d1a;border:1px solid color-mix(in srgb,var(--accent),transparent 60%);height:33px;border-radius:6px;font-size:20px}.card button{border:0;padding:0;background:none;text-align:left;font-weight:750}.card small{color:var(--muted);font-size:11px}.card a{grid-column:2;color:var(--accent);font-size:11px;width:fit-content}.card[aria-disabled=true]{opacity:.65}.card button:hover{color:var(--accent)}footer{text-align:center;padding:23px 0;color:#ae96b9}footer span{color:var(--pink);margin:0 7px}dialog{max-width:min(88vw,400px);border:1px solid #885b9b;border-radius:12px;background:#21172e;color:var(--ink);padding:24px}dialog::backdrop{background:#100919bd}dialog p{color:#d8bfdc}
+@media(max-width:700px){header{height:51px}.intro{padding:20px 0 16px}.intro>p:last-child{font-size:12px;max-width:280px}.keyboard{display:none}#stage{height:clamp(250px,47svh,355px)}.touch{display:flex}.game-footer{min-height:34px;padding:6px 10px}.section-title{margin-top:16px}#worlds{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:8px;gap:4px 6px}.bar{padding-inline:10px}}
+@media(pointer:coarse){.touch{display:flex}}
+.card .direct{grid-column:2;color:var(--accent);font-size:11px;width:fit-content;font-weight:500;text-decoration:underline;text-underline-offset:2px;min-height:24px}
+@media(min-width:701px){.intro{padding-top:15px;padding-bottom:19px}.intro h1{font-size:clamp(54px,6.5vw,98px)}#stage{height:clamp(305px,30vw,460px)}}
+
+/* The controls and panels share the two-tone edges of the game tiles. */
+.arcade,.card,#sound,.touch button,dialog{border-radius:2px;box-shadow:2px 2px 0 #0b0914}
+.arcade{box-shadow:3px 3px 0 #0b0914,0 12px 32px #09061180}
+.bar{background:linear-gradient(90deg,#2d1d3c,#191225);box-shadow:inset 0 2px #ffffff12}
+.intro h1{text-shadow:0 4px #d66c9c,0 7px #a8467e,3px 10px #4b2b60}
+.card .sigil,.touch button,kbd{border-radius:0}
+.card,.contact-link{box-shadow:inset 0 2px #60416655,2px 2px #0b0914}
+.touch button{border-bottom:3px solid #634572;font-weight:750}
+.touch button:active{border-bottom-width:1px;translate:0 2px}
+.touch-help{display:none;margin:0;padding:0 10px 10px;color:var(--muted);font-size:12px;line-height:1.45}
+.touch-help span{display:block}
+.contacts{margin-top:22px;padding:14px;border:1px solid #694665;background:#1c1429;box-shadow:inset 0 2px #a36b9b45,3px 3px #0b0914}
+.contacts h2{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.contacts h2::before{content:'';width:8px;height:8px;background:#ff9bbd;box-shadow:2px 2px #7a426d}
+#contact-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:10px}
+.contact-empty{margin:0;color:var(--muted);font-size:13px}
+.contact-link{display:grid;grid-template-columns:32px minmax(0,1fr);align-items:center;gap:3px 9px;padding:8px;border:1px solid #584063;background:#241835;text-decoration:none}
+.contact-link:hover{border-color:#f295bd;background:#382246}
+.contact-icon{grid-row:span 2;display:grid;place-items:center;height:32px;color:#ffb2cc;background:#130e20;border:1px solid #875a8c;font-family:monospace}
+.contact-value{color:#e6b7d2;font-size:12px;overflow-wrap:anywhere}
+@media(max-width:700px),(pointer:coarse){.touch-help{display:block}}
+
+@font-face{
+  font-family:"Press Start 2P";
+  src:url("/fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-display:swap
+}
+:root{--pixel:"Press Start 2P",monospace}
+.brand,.intro h1,.eyebrow,.bar,.section-title span,h2,footer,kbd{font-family:var(--pixel);font-weight:400}
+.brand{font-size:12px;letter-spacing:0}
+.brand span{font-family:system-ui,sans-serif}
+.intro h1{font-size:clamp(27px,5.45vw,78px);line-height:1.2;letter-spacing:-.08em;margin:14px .08em 12px 0;color:#ffe3ea}
+.eyebrow,.bar,.section-title span,footer{font-size:8px;line-height:1.65;letter-spacing:0}
+.bar span:last-child{font:14px system-ui,sans-serif;letter-spacing:1px}
+h2{font-size:13px;line-height:1.65}
+kbd{font-size:8px;padding:4px}
+.contacts,.card{border-color:#63476f}
+.contact-link,.card{background:linear-gradient(#271a35,#1b1428)}
+.card .sigil,.contact-icon{box-shadow:inset 2px 2px #ffffff13,2px 2px #120d1d}
+.card>button:not(.direct),.contact-link strong{font-family:var(--pixel);font-size:8px;line-height:1.6;overflow-wrap:anywhere}
+#sound{border-color:#755182;background:#2b1c39}
+footer{line-height:1.8}
+@media(max-width:700px){
+  .intro h1{font-size:clamp(27px,8.4vw,47px)}
+  .eyebrow{font-size:7px}
+  .section-title span{font-size:7px}
+  .card>button:not(.direct){font-size:7px}
+  footer{font-size:7px}
+}
+
+#sound,.touch button,dialog button{
+  --button-border:#9465a0;
+  position:relative;
+  border:0;
+  border-radius:0;
+  background:linear-gradient(#453058,#2b1b3b);
+  box-shadow:inset 0 2px var(--button-border),inset 0 -3px #100b19;
+  clip-path:polygon(4px 0,calc(100% - 4px) 0,calc(100% - 4px) 2px,100% 2px,100% calc(100% - 4px),calc(100% - 2px) calc(100% - 4px),calc(100% - 2px) 100%,2px 100%,2px calc(100% - 2px),0 calc(100% - 2px),0 4px,4px 4px);
+}
+#sound:hover,.touch button:hover,dialog button:hover{background:linear-gradient(#573969,#3c254d)}
+#sound:active,.touch button:active,dialog button:active{background:#523666;translate:0 2px;box-shadow:inset 0 2px #1b102a}
+#sound:focus-visible,.touch button:focus-visible,dialog button:focus-visible{
+  outline:0;
+  box-shadow:inset 0 0 0 3px #ffd1e6;
+}
+#sound,dialog button,.touch button[data-key=enter]{font-family:var(--pixel);font-size:8px;line-height:1.5}
+#sound{min-height:36px;padding-inline:11px}
+.touch button[data-key=left],.touch button[data-key=right],.touch button[data-key=jump]{font-size:20px}
+.card .direct{text-decoration-style:dotted;text-underline-offset:3px}
